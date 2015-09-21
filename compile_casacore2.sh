@@ -13,10 +13,9 @@ module load cuda/Cuda-6.5
 
 source $HOME/scripts/compiler_vars.sh
 
-echo "Changing directory to casacore-2.0.3"
 cd $SOURCE_PREFIX/casacore-2.0.3
-#rm -rf build && mkdir -p build && cd build
-mkdir -p build && cd build
+rm -rf build && mkdir -p build && cd build
+#mkdir -p build && cd build
 CMAKE_OPTIONS=""
 CMAKE_OPTIONS="${CMAKE_OPTIONS} -DCMAKE_INSTALL_PREFIX=${INSTALL_PREFIX}"
 CMAKE_OPTIONS="${CMAKE_OPTIONS} -DCMAKE_CXX_COMPILER=${MPICPP}"
@@ -31,11 +30,9 @@ CMAKE_OPTIONS="${CMAKE_OPTIONS} -DCXX11=ON"
 
 cmake .. ${CMAKE_OPTIONS}
 
-#make -j 4 clean
 make -j 4
 make -j 4 install
 
-echo "Changing directory to casacore-2.0.3"
 cd ${SOURCE_PREFIX}/python-casacore-2.0.0
 python setup.py build
 python setup.py install --prefix=${INSTALL_PREFIX}
