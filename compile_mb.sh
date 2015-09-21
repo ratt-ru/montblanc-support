@@ -12,4 +12,5 @@ module load mpi/openmpi-1.8.8
 module load cuda/Cuda-6.5
 
 cd ${SOURCE_PREFIX}/montblanc
+git submodule update --init
 python setup.py install
