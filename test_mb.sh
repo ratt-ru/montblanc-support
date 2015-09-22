@@ -5,16 +5,16 @@
 #PBS -e Q.test-mb.err
 #PBS -V
 
+source $HOME/scripts/base.sh
 
 module load compilers/gcc484
 module load mpi/openmpi-1.8.8
 module load cuda/Cuda-6.5
 
-source $HOME/scripts/base.sh
+# Active the virtual environment
+source $VENV_PREFIX/mb/bin/activate
 
 export CUDA_DEVICE=0
-#cd ${SOURCE_PREFIX}/montblanc/montblanc/tests
 date
-python --version
 python -c 'import montblanc; montblanc.test()'
 date

@@ -1,5 +1,6 @@
 export SOURCE_PREFIX=$HOME/src
 export INSTALL_PREFIX=$HOME/usr
+export VENV_PREFIX=$HOME/venv
 
 # Adaptation of http://superuser.com/a/39995
 # Usage: PATH = $(prepend_to_path $PATH /tmp)

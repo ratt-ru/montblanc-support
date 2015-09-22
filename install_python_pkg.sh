@@ -25,7 +25,5 @@ python ${SOURCE_PREFIX}/get-pip.py install ${CERT_OPTIONS}
 python -m pip --version
 # Upgrade pip
 python -m pip install -U pip ${CERT_OPTIONS}
-# install numpy
-python -m pip install -U numpy ${CERT_OPTIONS} 
 # install virtualenv
 python -m pip install -U virtualenv ${CERT_OPTIONS}
