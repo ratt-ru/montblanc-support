@@ -10,6 +10,7 @@ with the following package versions:
 - [HDF5 1.8.15-patch1][hdf5]
 - [cfitsio V3.370][cfitsio]
 - [wcslib 5.9][wcslib]
+- [libffi 3.2.1][libffi]
 - [casacore 2.0.3][casacore2]
 - [python-casacore 2.0.0][python-casacore]
 - [PyCUDA 2015.1.3][pycuda]
@@ -47,6 +48,7 @@ software packages.
 [hdf5]:https://www.hdfgroup.org/HDF5/release/obtainsrc.html
 [cfitsio]:http://heasarc.gsfc.nasa.gov/fitsio/fitsio.html
 [wcslib]:http://www.atnf.csiro.au/people/mcalabre/WCS/
+[libffi]:http://www.linuxfromscratch.org/blfs/view/svn/general/libffi.html
 [casacore2]:https://github.com/casacore/casacore/releases
 [python-casacore]:https://github.com/casacore/python-casacore/releases
 [pycuda]:https://github.com/inducer/pycuda/releases
