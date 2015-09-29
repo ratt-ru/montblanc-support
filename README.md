@@ -22,7 +22,7 @@ of other versions by editing individual scripts.
 # Configuration
 
 In general, the scripts assume that they are installed
-in the `$HOME\script` directory.
+in the `$HOME/script` directory.
 
 The `base.sh` and `compiler_vars.sh` scripts are used
 to configure environment variables in the
