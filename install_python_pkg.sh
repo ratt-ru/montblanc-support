@@ -11,7 +11,8 @@ module load compilers/gcc492
 module load mpi/openmpi-1.8.8
 module load cuda/Cuda-6.5
 
-python --version
+PYTHON_VERSION=$(python --version)
+echo "python version is ${PYTHON_VERSION}"
 
 cd ${SOURCE_PREFIX}
 # Download the get-pip.py script
@@ -20,9 +21,10 @@ wget -c https://bootstrap.pypa.io/get-pip.py
 # http://stackoverflow.com/a/26062583
 wget -c http://curl.haxx.se/ca/cacert.pem
 CERT_OPTIONS="--cert ${SOURCE_PREFIX}/cacert.pem"
-# --install
-python ${SOURCE_PREFIX}/get-pip.py install ${CERT_OPTIONS}
-python -m pip --version
+# Install download pip version
+python ${SOURCE_PREFIX}/get-pip.py ${CERT_OPTIONS} -vvv
+PIP_VERSION=$(python -m pip --version)
+echo "pip version ${PIP_VERSION}"
 # Upgrade pip
 python -m pip install -U pip ${CERT_OPTIONS}
 # install virtualenv
