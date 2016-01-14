@@ -29,3 +29,5 @@ echo "pip version ${PIP_VERSION}"
 python -m pip install -U pip ${CERT_OPTIONS}
 # install virtualenv
 python -m pip install -U virtualenv ${CERT_OPTIONS}
+# install numpy
+python -m pip install -U numpy ${CERT_OPTIONS}
